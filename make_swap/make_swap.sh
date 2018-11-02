@@ -13,6 +13,7 @@ echo "Create a swapfile "$SWAPSIZE"*"$SIZEUNIT
 dd if=/dev/zero of=$DIR$SWAPFILE bs=$SIZEUNIT count=$SWAPSIZE
 mkswap $DIR$SWAPFILE
 swapoff -a
+chmod 0600 $DIR$SWAPFILE
 swapon $DIR$SWAPFILE
 
 echo -en "\\033[1;33m"
@@ -22,6 +23,6 @@ echo $DIR$SWAPFILE "swap swap default 0 0"
 echo "from the fstab file"
 echo -en "\\033[0;39m"
 
-echo $DIR$SWAPFILE swap swap defaults 0 0>>/etc/fstab
+echo $DIR$SWAPFILE "swap swap defaults 0 0">>/etc/fstab
 
 sysctl vm.swappiness=60
