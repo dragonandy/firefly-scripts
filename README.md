@@ -20,5 +20,6 @@ unfortunately blender doesnt provide official compile option to build blender on
 
 ## make_swap
 
-`sudo ./make_swap.sh`to automatic create a swapfile and mount it to the system.modify the script to fit your need.`DIR=/mnt/` is the default where swapfile locate,`SWAPFILE=swapfile` is the swapfile file name,`SWAPSIZE=4096` is the size of swapfile,`SIZEUNIT=1M` is the clock size,the actual swapfile size is SWAPSIZE times SIZEUNIT.  
-The script will write the mount setting to `/etc/fstab` mosify this if you dont want to mount the swapfile when you start the system
+`sudo ./make_swap.sh`to automatic create a swapfile and mount it to the system.modify the script to fit your need.  
+`DIR=/mnt/` is the default where swapfile locate,`SWAPFILE=swapfile` is the swapfile file name,`SWAPSIZE=4096` is the size of swapfile,`SIZEUNIT=1M` is the clock size,the actual swapfile size is SWAPSIZE times SIZEUNIT.  
+The script will write the mount setting to `/etc/fstab` mosify this if you dont want to mount the swapfile when you start the system.  
